@@ -1,0 +1,22 @@
+{
+  "name": "normal-christian-life-study",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Native mobile wrapper for The Normal Christian Life Study Companion.",
+  "scripts": {
+    "build": "node scripts/copy-web-assets.mjs",
+    "cap:sync": "npm run build && cap sync",
+    "cap:add:android": "npm run build && cap add android",
+    "cap:add:ios": "npm run build && cap add ios",
+    "android": "npm run cap:sync && cap open android",
+    "ios": "npm run cap:sync && cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "latest",
+    "@capacitor/core": "latest",
+    "@capacitor/ios": "latest"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "latest"
+  }
+}

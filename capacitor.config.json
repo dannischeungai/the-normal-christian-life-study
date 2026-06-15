@@ -1,0 +1,9 @@
+{
+  "appId": "com.normalchristianlife.study",
+  "appName": "NCL Study",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">NCL Study</string>
+    <string name="title_activity_main">NCL Study</string>
+    <string name="package_name">com.normalchristianlife.study</string>
+    <string name="custom_url_scheme">com.normalchristianlife.study</string>
+</resources>

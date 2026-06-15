@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#173b32" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="NCL Study" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>The Normal Christian Life Study Companion</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Study navigation">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">NCL</span>
+          <div>
+            <p>The Normal Christian Life</p>
+            <strong>Study Companion</strong>
+          </div>
+        </div>
+
+        <label class="search">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="chapter, theme, verse..." />
+        </label>
+
+        <div class="language-switcher" aria-label="Language">
+          <button class="language-option" data-language="en">EN</button>
+          <button class="language-option" data-language="zh">繁中</button>
+          <button class="language-option active" data-language="both">Both</button>
+        </div>
+
+        <nav class="chapter-list" id="chapterList" aria-label="Chapters"></nav>
+      </aside>
+
+      <main>
+        <section class="hero">
+          <img src="assets/study-hero.png" alt="A peaceful desk prepared for Christian study" />
+          <div class="hero-overlay">
+            <p class="eyebrow">Understand · Memorise · Practice</p>
+            <h1>The Normal Christian Life</h1>
+            <p>
+              A clear, interactive guide to Watchman Nee's classic teaching on Romans:
+              what Christ has done, who the believer is in Him, and how the Christian
+              life is lived by faith.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-action" id="startStudy">Start Study</button>
+              <button class="secondary-action" id="reviewMemory">Review Cards</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="topbar" aria-label="Study status">
+          <div>
+            <span class="stat-label">Progress</span>
+            <strong id="progressText">0 / 14</strong>
+          </div>
+          <div>
+            <span class="stat-label">Memory</span>
+            <strong id="memoryText">0 cards due</strong>
+          </div>
+          <div>
+            <span class="stat-label">Focus</span>
+            <button class="icon-button" id="focusToggle" title="Toggle focus mode" aria-label="Toggle focus mode">
+              ◐
+            </button>
+            <button class="install-action" id="installApp" hidden>Install</button>
+          </div>
+        </section>
+
+        <section class="reader-layout">
+          <article class="chapter-panel" id="chapterPanel"></article>
+
+          <aside class="study-panel" aria-label="Memory and notes">
+            <div class="tabs" role="tablist" aria-label="Study tools">
+              <button class="tab active" data-tab="memory" role="tab">Memory</button>
+              <button class="tab" data-tab="quiz" role="tab">Quiz</button>
+              <button class="tab" data-tab="notes" role="tab">Notes</button>
+            </div>
+
+            <section class="tool-pane active" id="memoryPane"></section>
+            <section class="tool-pane" id="quizPane"></section>
+            <section class="tool-pane" id="notesPane">
+              <label class="notes-label" for="chapterNotes">Personal notes</label>
+              <textarea id="chapterNotes" placeholder="Write what you are seeing, praying, or memorising..."></textarea>
+              <button class="primary-action full" id="saveNotes">Save Notes</button>
+              <p class="save-status" id="saveStatus" aria-live="polite"></p>
+            </section>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

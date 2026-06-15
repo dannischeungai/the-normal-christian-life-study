@@ -1,0 +1,19 @@
+{
+  "name": "The Normal Christian Life Study Companion",
+  "short_name": "NCL Study",
+  "description": "A mobile-friendly study companion for understanding and memorising The Normal Christian Life.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fbfaf6",
+  "theme_color": "#173b32",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
